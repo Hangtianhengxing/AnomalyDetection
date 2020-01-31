@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 from config import *
 
 Data = pd.read_csv('./temp_data/data.csv')
+#(15063, 169)
 Indices = np.arange(Data.shape[0])
 np.random.shuffle(Indices)
 Data = np.array(Data)
@@ -35,7 +36,7 @@ if __name__ == '__main__':
         costs = []
         begin = True
         # 训练 10 次
-        for epoch in range(100):
+        for epoch in range(10):
             BATCH_START = 0
             np.random.shuffle(Indices)
             for i in range(len(Indices) // BATCH_SIZE):

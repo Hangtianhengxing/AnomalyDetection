@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 
 def main():
-    costs = np.load('cost.npy')
+    costs = np.load('./temp_data/cost.npy')
     plt.plot(costs)
     plt.xlabel("step")
     plt.ylabel("mean squre error")
